@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{margin:0;padding:0;max-width:100vw;overflow:hidden}
+            page{position:relative;}
+            header{display:flex;justify-content:space-between;height:7vh;align-items: center;}
+            .btn{padding:5px;width:5vw}
+            form{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:3;}
+            #boxes{width:100vw;max-width:100vw;height:93vh;background:grey;display:grid;
+            grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,1fr);grid-gap:50px;}
+            #boxes div{border:5px solid black;padding:5px;color:darkolivegreen} 
+        </style>
+    </head>
+    <body>
+        <page>
+        <header>
+        <h2>EVENTS</h2>
+        <div>
+            <span id="count">count-0</span>
+            <button class="btn" onclick="toggle()">Add</button>
+            <button class="btn" onclick="deleteDiv()">Delete</button>
+        </div>
+        </header>
+        <form name="form" action="lab.html" >
+            <table>
+                <tr><td>title:</td><td><input name="title" type="text" required></td></tr>
+                <tr><td>des:</td><td><input name="des" type="text" required></td></tr>
+                <tr><td>link:</td><td><input name="link" type="text" required></td></tr>
+                <tr><td><button onclick="toggle();info();">submit</button></td></tr>
+            </table>
+        </form>
+        <div id="boxes">
+            
+            
+        </div>
+        </page>
+        
+        <script src="event.js"></script>
+    </body>
+</html>

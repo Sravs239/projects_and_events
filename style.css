@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+.helping-hands{
+  height: 125px;
+  width:350px;
+}
+
+.background{
+    color:#fae38c;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin:40px;
+}
+.courosel-image{
+    height:500px;
+    width:100vw;
+    margin:24px;
+}
+.logo {
+  width: 80px;
+  height: 70px;
+}
+#navItem1 {
+  color: #323f4b;
+  font-family: "Roboto";
+}
+#navItem2 {
+  color: #323f4b;
+  font-family: "Roboto";
+}
+#navItem3 {
+  color: #323f4b;
+  font-family: "Roboto";
+}
+#navItem4 {
+  color: #323f4b;
+  font-family: "Roboto";
+}
+.project-section {
+  background-color: #f9fbfe;
+}
+.project-heading {
+  color: #183b56;
+  font-family: "Roboto";
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.project-card {
+  text-align: center;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e5eaf4;
+  border-radius: 16px;
+}
+.project-image {
+  width: 200px;
+  height: 200px;
+}
+.project-title {
+  color: #323f4b;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+.event-section {
+  background-color: white;
+}
+.event-heading {
+  color: #183b56;
+  font-family: "Roboto";
+  font-size: 28px;
+  font-weight: 700;
+}
+.event-image {
+  border-radius: 16px;
+}
+.event-title {
+  color: #323f4b;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 24px;
+}
+.event-link {
+  color: #d0b200;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 500;
+}
+.event-card {
+  border-radius: 16px;
+}
+.follow-us-section {
+  background-color: white;
+}
+.follow-us-section-heading {
+  text-align: center;
+  color: #183b56;
+  font-family: "Roboto";
+  font-size: 28px;
+  font-weight: 700;
+}
+.follow-us-icon-container {
+  background-color: #faf7e8;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  margin: 15px;
+  padding-top: 22px;
+  padding-bottom: 14px;
+  padding-right: 16px;
+  padding-left: 22px;
+}
+.icon {
+  color: #d0b200;
+  font-size: 35px;
+}
