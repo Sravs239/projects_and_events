@@ -1,17 +1,27 @@
 function info(){
     form=document.form;
-    let title=form.title.value;
-    let des=form.des.value; 
-    let link=form.link.value;
-    form.title.value="";
-    form.des.value="";
-    form.link.value="";
-    createDiv(title,des,link);
+    check = validate(form)
+    if(check){
+        let title=form.title.value;
+        let des=form.des.value; 
+        let link=form.link.value;
+        form.title.value="";
+        form.des.value="";
+        form.link.value="";
+        createDiv(title,des,link);
+    }
+    else{
+        form.title.value="";
+        form.des.value="";
+        form.link.value="";
+        alert("invalid data");
+    }
 }
 
 function createDiv(title,des,link){
-    let boxes=document.getElementById("boxes");
+    var boxes=document.getElementById("boxes");
     divobj=document.createElement("div");
+    divobj.setAttribute("class","card")
     boxes.appendChild(divobj);
 
     let t=document.createElement("h2");
@@ -21,40 +31,20 @@ function createDiv(title,des,link){
     let d=document.createElement("p");
     d.innerText=des;
     divobj.appendChild(d);
-    let  a=document.createElement("a");
-    a.innerText="register"
+    let a=document.createElement("a");
+    a.innerHTML="<button>register</button>"
     a.href=link;
     divobj.appendChild(a);
-    update(true)
-}
-
-function deleteDiv(title){
-    title=prompt("enter title of event");
-    let boxes=document.getElementById("boxes");
-    events=boxes.getElementsByTagName("div");
-    for(var event of events){
-        console.log("checking..")
-        if(document.getElementById("title").textContent==title){
-            boxes.removeChild(event);
-            alert("event removed");
-            update(false)
-            return ;
-        }
-    }
-    alert("event is not there");
-}
-
-let count=0
-function update(bool){
-    if(bool){
-        count=count+1
-        document.getElementById("count").innerText="count - "+(count)
-    }
-    else{
-        count=count-1
-        document.getElementById("count").innerText="count - "+(count)
-    }
-        
+    let btn=document.createElement("button");
+    btn.innerText="remove"
+    btn.style.padding="5px"
+    btn.style.display="block"
+    btn.addEventListener("click",()=>
+    {
+        let card=btn.parentElement;
+        boxes.removeChild(card);
+    })
+    divobj.appendChild(btn)
 }
 
 function toggle(){
@@ -66,6 +56,12 @@ function toggle(){
     }  
     else{
         form.style.display="none";
-        document.getElementById("boxes").style.opacity=".7";
-    }
+        document.getElementById("boxes").style.opacity="1";
+    }
+}
+
+function validate(form){
+    if(form.title.value !="" && form.des.value !="" && form.link.value !="")
+        return true
+    return false
 }
