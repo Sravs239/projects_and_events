@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/x-icon" class="logo" href="https://i.ibb.co/8sYYTyB/logo1.png">
+        <title>Projects</title>
+        <style>
+            html, body {
+    height: 100%; /* Set the height of the HTML and body elements to 100% */
+    margin: 0; /* Remove any default margin */
+    overflow: auto; /* Enable scrolling for the entire webpage */
+  }
+            *{margin:0;padding:0;max-width:100vw;overflow:hidden}
+            page{position:relative;}
+            header{display:flex;justify-content:space-between;height:10vh;align-items: center;}
+           h1{
+              margin-left:45%;
+           }
+           header {
+            display: flex;
+            justify-content: space-between;
+            height: 7vh;
+            align-items: center;
+            padding: 10px;
+        }
+            .btn{color: rgb(7, 7, 8);padding:5px;margin:2px 5px 2px 5px;transition: background-color 0.3s;border-radius:5px;}
+            .btn:hover {
+            background-color: #0d0e0c;color: #adaeb6;
+            }
+            #add{
+            padding:5px;}
+            input{
+            border-radius:5px;
+            border-color: black;
+        }
+        #sub{
+            padding:5px;
+            border-color:aliceblue ;
+            background-color: rgb(53, 75, 141);
+            color:aliceblue;
+            border-radius: 5px;
+            align-items: center;
+            margin-top: 15px;
+            font-size:25px;
+        }
+        #para{
+            color:#a71616;
+            background-color:rgb(164, 186, 228);
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            padding: 3px;
+            line-height: 25px;
+        }
+            form{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:3;}
+            #boxes{background-image:url("https://cdn.pixabay.com/photo/2018/05/14/16/54/cyber-3400789_1280.jpg");
+            width:100vw;
+            height:93vh;
+            display: grid;
+            background-attachment: fixed;
+            background-size: cover;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            justify-content: space-evenly;
+            grid-gap: 2rem;
+            box-sizing: border-box;   
+        }
+        #delete{
+            margin-top: 80%;
+            background-color: rgb(223, 55, 55);
+            border-radius: 1px;
+            padding: 2px;
+            color: aliceblue;
+        }
+        #download{
+            margin-top: 70%;
+            /* background-color:rgb(20, 100, 37); */
+            border-radius: 1px;
+            padding: 2px;
+        }
+            #boxes div{
+                        width: fit-content;
+                        height:fit-content;
+                       border: 1px solid #ccc; /* Border color and thickness */
+                       border-radius: 5px; /* Rounded corners */
+                       box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle elevation effect */
+                       padding: 20px; /* Padding around the card content */
+                       background-color: #f5f5f5; /* Background color */
+                       color: #0d0e0c;
+                       margin: 1rem 1rem;
+                        position: relative;
+}
+    #boxes .card h2{
+    font-size: 20px; /* Heading font size */
+    margin-bottom: 10px; /* Margin below the heading */
+    color: #0d0e0c;text-align: center;text-decoration: underline;
+  }
+  #boxes .card p {
+    font-size: 16px; /* Paragraph font size */
+    color: #09006b;
+    text-align: justify;
+  }
+                    
+            /* a{
+                text-decoration: none;
+                border: 1px solid rgb(19, 21, 117);
+                border-radius: 1px;
+                background-color:rgb(204, 204, 211);
+                margin:5px;
+            } */
+            @media (max-width: 1000px) {
+            #boxes {
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 780px) {
+            #boxes {
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 1rem;
+            }
+
+            #boxes div {
+                margin: 1rem 2rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            #boxes {
+                grid-template-columns: 1fr;
+                grid-gap: 4rem;
+            }
+
+            #boxes div {
+                margin: 1rem 2rem;
+            }
+        }
+        #boxes div button {
+            margin: 3px;
+            margin-left: 40%;
+            border-radius: 3px;
+        }
+        #boxes div {
+            width: fit-content;
+            height:fit-content;
+            border: 1px solid #636060;
+            border-radius: 5px;
+            padding: 20px;
+            /* padding: 0.5rem; */
+            background-color: #d8d3d3;
+            margin: 1rem 1rem;
+            position: relative;
+        }
+
+            /* .neon{
+  font-family: 'Arial', sans-serif;
+  color: #0ff78b;border-radius:20%;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #0fe6ee, 0 0 70px #00ff00, 0 0 80px #00ff00, 0 0 100px #00ff00, 0 0 150px #00ff00;
+  animation: neon-glow 1.5s ease-in-out infinite alternate;}
+@keyframes neon-glow {
+  0% {text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00ff00, 0 0 70px #00ff00, 0 0 80px #00ff00, 0 0 100px #00ff00, 0 0 150px #00ff00;}
+  100% {text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00ff, 0 0 70px #ff00ff, 0 0 80px #ff00ff, 0 0 100px #ff00ff, 0 0 150px #ff00ff;
+  } }*/
+table{
+    border:1px solid rgb(19, 21, 117);
+    border-width:2px;
+    border-radius:5px;
+    padding:30px;
+    background-color: #adaeb6;
+}
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  margin-left: 40%;
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 60px;
+      font-family:Georgia, Times;
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+        </style>
+    </head>
+    <body>
+        <page>
+        <header>
+        <h1 class="animate-charcter">PROJECTS</h1>
+        <div>
+            <a href="copy.html"><button id="add" >HOME</button></a>
+            <span id="count">Count-0</span>
+            <button class="btn" onclick="toggle()">Add Projects</button>
+            <!-- <button class="btn" onclick="deleteDiv()">Delete</button> -->
+        </div>
+        </header>
+        <hr>
+        <div id="para"><p>Welcome to our university project showcase, where groundbreaking ideas come to life. Explore a diverse range of projects developed by our talented students and faculty members. From cutting-edge research and technological innovations to creative works and social initiatives, witness the transformative power of knowledge and ingenuity.</p></div>
+
+        <form name="form">
+            <table>
+                <tr>
+                    <td style="text-align: right;"><pre>pro</pre></td>
+                    <td><pre>ject Details</pre></td>
+                </tr>
+              <tr>
+                <td>Title:</td>
+                <td><input name="title" type="text" required></td>
+              </tr>
+              <tr>
+                <td>Description:</td>
+                <td><input name="des" type="text" required></td>
+              </tr>
+              <tr>
+                <td><label for="project-file">Upload Project:</label></td>
+                <td>
+                  <a target="_blank" href="https://drive.google.com/drive/folders/1w4cIyvlI-OozsNgmKm09mNp9iQhWPCP8?usp=sharing">
+                    <!-- <button>upload</button> --> Upload
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2"><button type="submit" onclick="toggle();info();">Submit</button></td>
+              </tr>
+            </table>
+          </form>
+          
+        <!-- <form name="form">
+            <table>
+                <tr><td>Title:</td><td><input name="title" type="text" required></td></tr>
+                <tr><td>Des:</td><td><input name="des" type="text" required></td></tr>
+                <tr><td><label for="project-file">Upload Project:</label>
+                    <tr colspan="2"><td> <a target="_blank" href="https://drive.google.com/drive/folders/1w4cIyvlI-OozsNgmKm09mNp9iQhWPCP8?usp=sharing"><button>upload</button></a></td></tr>  
+                    <tr colspan="2"><td><button type="submit" onclick="toggle();info();" >Submit</button></td></tr>        
+            </table>
+        </form> -->
+        <div id="boxes" style="background-image: url('https://cdn.pixabay.com/photo/2018/05/14/16/54/cyber-3400789_1280.jpg')";></div>
+    </page>
+            <script>
+            function info(){
+                form=document.form;
+                let title=form.title.value;
+                let des=form.des.value; 
+                form.title.value="";
+                form.des.value="";
+                createDiv(title,des);
+            }
+            function createDiv(title,des){
+                var boxes=document.getElementById("boxes");
+                divobj=document.createElement("div");
+                divobj.setAttribute("class", "card");
+                boxes.appendChild(divobj);
+
+                let t=document.createElement("h2");
+                t.innerText=title;
+                t.id="title"
+                // getElementById("#title").style.color="red";
+                
+                divobj.appendChild(t);
+                let d=document.createElement("p");
+                d.innerText=des;
+                divobj.appendChild(d);
+  
+//                 var fileUrl =filepath;
+// var fileName = fileUrl.substring(fileUrl.lastIndexOf('/') + 1);
+
+// var downloadLink = document.createElement('a');
+// downloadLink.setAttribute('href', fileUrl);
+// downloadLink.setAttribute('download', fileName);
+// downloadLink.innerHtml ="<button>Download</button>";
+
+// divobj.appendChild(downloadLink);
+
+            filepath="https://drive.google.com/drive/folders/1w4cIyvlI-OozsNgmKm09mNp9iQhWPCP8?usp=sharing";
+                let a = document.createElement("a");
+            a.innerHTML = "<button>Download</button>";
+            a.setAttribute("href",filepath);
+            a.id="download";
+            // a.href = filepath;
+            // a.setAttribute('download',filepath);
+            divobj.appendChild(a);
+            let btn = document.createElement("button");
+            btn.innerText = "Delete";
+            btn.id="delete";
+            btn.style.padding = "5px";
+            btn.style.display = "block";
+            btn.addEventListener("click", () => {
+                let card = btn.parentElement;
+                boxes.removeChild(card);
+            });
+            divobj.appendChild(btn);
+            }
+            
+            
+            
+            // let count=0
+            // function update(bool){
+            //     if(bool){
+            //         count=count+1
+            //         document.getElementById("count").innerText="count - "+(count)
+            //     }
+            //     else{
+            //         count=count-1
+            //         document.getElementById("count").innerText="count - "+(count)
+            //     }
+                    
+            // }
+            
+            function toggle(){
+                form=document.form;
+                let layout=document.getElementById("boxes");
+                if(form.style.display=="none"){
+                    form.style.display="block";
+                    document.getElementById("boxes").style.opacity=".7";
+                }  
+                else{
+                    form.style.display="none";
+                    document.getElementById("boxes").style.opacity=".7";
+                }
+                
+            }
+            </script>
+        
+        </body>
+        </html>
