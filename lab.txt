@@ -1,1 +1,2 @@
+Hi CSE6!
 This is external lab.
