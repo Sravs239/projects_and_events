@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" type="image/x-icon" class="logo" href="https://i.ibb.co/8sYYTyB/logo1.png">
+  <title>Register</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UAComplatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <!-- <script defer src="register.js"></script> -->
+  <style>
+   
+    htm {
+      background-color: #270F34; 
+    height: 100%; 
+    margin: 10px;
+    overflow: auto; 
+  }
+body{
+    /*border:10px #7e1b1b;  */
+    background-color: #270F34; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.container{
+    padding: 10px;
+}
+#form{
+    margin-top:20%;
+    width: auto;
+    
+    padding-left: 20%;
+    padding-right: 25%;
+    background-color:#c9c9c9;
+    border-radius: 15px;
+    align-items: center;
+
+}
+#fieldset{
+    margin: 20%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px;
+    border-color: rgb(218, 29, 29);
+}
+.form-group{
+    padding: 10px;
+}
+input,label{
+    padding: 2px;
+}
+input{
+    border-width: 3px;
+}
+label{
+    font-weight:540;
+    font-family:'Times New Roman', Times, serif;
+    font-size:large;
+}
+.form-control{
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px 10px 10px; 
+    /* margin-bottom:1%;  */
+    box-sizing: content-box;
+    border: 1px solid rgba(165, 159, 159, 0.432);
+
+}
+legend {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.form-control::placeholder {
+    color:black; /* Set the desired placeholder text color */
+  }
+ /* .form-control:active {
+    outline: none;
+    border-color: #f5ba1a;
+}  */
+input:focus::placeholder {
+    color: transparent;
+  }
+  
+.gender-value{
+    border:none;
+}
+.details{
+    margin-bottom: 5px;
+
+}
+input:valid {
+      border: 2px solid rgb(82, 233, 44);
+}
+.center-items {
+    margin-top: 10px;
+    line-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh;  Adjust as needed */
+}
+@media (max-width: 584px){
+    .container{
+        max-width: 100%;
+    }
+    form .group-control .form-check{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .form-check-input{
+        width: 100%;
+    }
+    .container form .user-details{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    /*.container::-webkit-scrollbar{
+        width:0px;
+    }*/
+}
+p{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.error{
+    
+    padding-top: 5px;
+}
+/*.btn{
+    background-color: darkgreen; */
+  </style>
+
+</head>
+<body>
+  
+  <div class="col-lg-4"></div>
+  <div class="container col-lg-4">
+    <form action="action.php" method="get" id="form" class=" form-group inputcontrol" onsubmit="validateInputs()" >
+      <fieldset id="fieldeset">
+        <legend >Registration</legend>
+        <div class="form-row">
+          <div class=" form-group inputcontrol">
+            <label for="fullname:">Full Name</label>
+            <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Enter your name" required>
+            <div class="error"></div>
+          </div>
+          <div class=" form-group inputcontrol">
+            <label for="id">ID Number</label>
+            <input type="text" class="form-control" id="id" name="id" placeholder="Enter your ID" required>
+            <div class="error"></div>
+          </div>
+        </div>
+        <div class=" form-group inputcontrol ">
+          <label for="dob">Date of Birth</label>
+          <input type="date" class="form-control" id="dob" name="dob" required>
+          <div class="error"></div>
+        </div>
+        <div class=" form-group inputcontrol">
+          <label for="gender">Gender</label>
+          <div class="form-check">
+            <input type="radio" class="form-check-input" id="male" name="gender" value="male" required>
+            <label class="form-check-label" for="male">Male</label>
+          </div>
+
+          <div class="form-check">
+            <input type="radio" class="form-check-input" id="female" name="gender" value="female" required>
+            <label class="form-check-label" for="female">Female</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" class="form-check-input" id="others" name="gender" value="others" required>
+            <label class="form-check-label" for="others">Others</label>
+          </div>
+        </div>
+        <div class=" form-group inputcontrol">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+          <div class="error"></div>
+        </div>
+        <div class=" form-group inputcontrol">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Create password" required>
+          <div class="error"></div>
+        </div>
+        <div class=" form-group inputcontrol">
+          <label for="confirmpassword" >Confirm Password</label>
+          <input type="password" class="form-control" id="password2" name="password2" placeholder="Confirm password" required>
+          <div class="error"></div>
+        </div>
+        <div class=" form-group inputcontrol">
+          <label for="phone">Phone Number</label>
+          <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" minlength="10" maxlength="10" required>
+          <div class="error"></div>
+        </div>
+        <div class=" form-group inputcontrol">
+          <label for="year">Year</label>
+          <select class="form-control" id="year" name="year" required>
+            <option ></option>
+            <option value="PUC1">PUC1</option>
+            <option value="PUC2">PUC2</option>
+            <option value="E1">E1</option>
+            <option value="E2">E2</option>
+            <option value="E3">E3</option>
+            <option value="E4">E4</option>
+          </select>
+        </div>
+        <div class=" form-group inputcontrol">
+          <label for="branch">Select your Branch</label>
+          <select class="form-control" id="branch" name="branch" required>
+            <option></option>
+            <option value="PUC">PUC</option>
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+            <option value="CIVIL">CIVIL</option>
+            <option value="MECH">MECH</option>
+            <option value="MME">MME</option>
+            <option value="CHEM">CHEM</option>
+          </select>
+        </div>
+        <div class=" form-group inputcontrol form-check container-fluid center-items">
+          <input type="checkbox" class="form-check-input" id="remember">
+          <label class="form-check-label" name="remember">I agree to the terms and conditions</label> <br>
+        
+        <a href="copy.html"> <button type="submit" class="btn btn-primary container-fluid center-items">Register</button></a>
+      </div>
+       <p class="container-fluid center-items">Already have an account? </p> <a href="login.html" class="btn btn-success container-fluid center-items">Login</a>
+      
+      </fieldset>
+    </form>
+  </div>
+  <div class="col-lg-4"></div>
+  <script>
+    const form=document.getElementById("form");
+const fname=document.getElementById("fullname");
+const id=document.getElementById("id");
+const email=document.getElementById("email");
+const password=document.getElementById("password");
+const password2=document.getElementById("password2");
+const phone=document.getElementById("phone");
+
+form.addEventListener('submit',e => {
+  e.preventDefault();
+  validateInputs();
+});
+const setError = (element, message) => {
+  const inputcontrol = element.parentElement;
+  const errorDisplay=inputcontrol.querySelector('.error');
+  message.style.color='red';
+  errorDisplay.innerText = message;
+  inputcontrol.classList.add('error');
+  inputcontrol.classList.remove('success');
+  message.style.color='red';
+};
+const setSuccess = element => {
+  const inputcontrol = element.parentElement;
+  const errorDisplay=inputcontrol.querySelector('.error');
+
+  errorDisplay.innerText ='';
+  inputcontrol.classList.remove('success');
+  inputcontrol.classList.add('error');
+}
+
+const validateInputs=() => {
+const fnamevalue=fname.value.trim();
+const idvalue=id.value.trim();
+const emailvalue=email.value.trim();
+const passwordvalue=password.value.trim();
+const password2value=password2.value.trim();
+const phonevalue=phone.value.trim();
+if(fnamevalue ===''){
+  setError(fname,'Name is required');
+  fname.style.borderColor='red';
+} else{
+  setSuccess(fname);
+}
+
+const idregex = /^[NSOR][0-9]{6}$/;
+
+if (idregex.test(idvalue)) {
+  setSuccess(id);
+} else {
+  setError(id,'Enter valid ID number');
+}
+const emailregex = /^([NSOR])([0-9]{6})(@rgukt)[nsro](.ac.in)$/;
+if(emailregex.test(emailvalue))
+{
+  setSuccess(email);
+}
+else{
+  setError(email,'Enter valid email');
+}
+if(passwordvalue.length < 8){
+  setError(password,'Password length must be atleast 8 character');
+} else{
+  setSuccess(password);
+}
+if(password2value.length < 8){
+  setError(password2,'Password length must be atleast 8 characters');
+}else if(passwordvalue!==password2value) {
+  setError(password2,'Password and confirm password must be same');
+}else{
+  setSuccess(password2);
+}
+ 
+};
+
+
+/*function validateForm() 
+  {
+        var FullNameInput = document.getElementById("FullName").value;
+      var emailInput = document.getElementById("email").value;
+      var passwordInput = document.getElementById("password").value;
+      var phoneNumberInput = document.getelementById("phoneNumber").value;
+      var confirmpassword=document.getElementById("confirmpassword").value;
+      {
+      // Check if inputs are not empty
+      if (FullNameInput.value === "" || emailInput.value === "" || passwordInput.value === "" ) {
+        alert("Please fill in all fields");
+        return false;
+      }
+    
+      // Check if email is valid
+     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(emailInput.value)) {
+        alert("Please enter a valid email address");
+        return false;
+      }
+    
+      // Check if password is at least 8 characters long
+      if (passwordInput.value.length < 8) {
+        alert("Password must be at least 8 characters long");
+        return false;
+      }
+      // Check if ph.no is only digits
+      if(isNaN(phoneNumberInput.value && phoneNumberInput.value.lengt!=10))
+      {
+        alert("enter digits only");
+        return false;
+      }
+       // If all checks pass, return true to submit the form
+       // If all validations pass, you can submit the form or perform further actions
+    //document.getElementById('myForm').submit(); // Uncomment to submit the form
+    alert('Form submitted successfully!');
+      }
+  return true;
+}  */
+  </script>
+  
+</body>
+</html>
